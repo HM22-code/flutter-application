@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/views/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: "regular",
+        appBarTheme:  AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        )
       ),
+      home: const Home(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
