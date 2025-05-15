@@ -1,26 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/views/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MainApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: "regular",
-        appBarTheme:  AppBarTheme(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-        )
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Hello World!'),
+        ),
       ),
-      home: const Home(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
